@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+.wrap {
+  margin: 0 auto;
+  width: 600px;
+  background: aqua;
+}
 
 button {
   outline: none;

@@ -47,19 +47,23 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Navbar
-          totalCount={this.state.habits.filter((item) => item.count > 0).length}
-        />
-        <Habits
-          habits={this.state.habits}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete}
-          onAdd={this.handleAdd}
-          onReset={this.handleReset}
-        />
-      </React.Fragment>
+      <div className="wrap">
+        <React.Fragment>
+          <Navbar
+            totalCount={
+              this.state.habits.filter((item) => item.count > 0).length
+            }
+          />
+          <Habits
+            habits={this.state.habits}
+            onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
+            onDelete={this.handleDelete}
+            onAdd={this.handleAdd}
+            onReset={this.handleReset}
+          />
+        </React.Fragment>
+      </div>
     );
   }
 }
